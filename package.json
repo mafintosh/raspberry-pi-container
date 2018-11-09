@@ -1,0 +1,30 @@
+{
+  "name": "raspberry-pi-container",
+  "version": "0.0.0",
+  "description": "systemd-nspawn raspberry-pi container backed by qemu-arm-static",
+  "main": "index.js",
+  "bin": {
+    "raspberry-pi-container": "./run.js"
+  },
+  "dependencies": {
+    "ansi-diff": "^1.1.1",
+    "prettier-bytes": "^1.0.4",
+    "pump": "^3.0.0",
+    "simple-get": "^3.0.3",
+    "unzipper": "^0.9.4"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/raspberry-pi-container.git"
+  },
+  "scripts": {
+    "install": "node install.js"
+  },
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/raspberry-pi-container/issues"
+  },
+  "homepage": "https://github.com/mafintosh/raspberry-pi-container"
+}
