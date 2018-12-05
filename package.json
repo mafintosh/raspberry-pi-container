@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "ansi-diff": "^1.1.1",
+    "mount-img": "^1.2.0",
     "prettier-bytes": "^1.0.4",
     "pump": "^3.0.0",
     "simple-get": "^3.0.3",
