@@ -11,6 +11,10 @@ const img = path.join(raspbian, fs.readdirSync(raspbian).filter(x => /\.img$/.te
 
 const qemu = execSync('which qemu-arm-static').toString().trim()
 
+if (fs.existsSync(mnt) === false) {
+  fs.mkdirSync(mnt)
+}
+
 spawnSync(mount, ['-p', '2', '-f', img, mnt], {
   stdio: 'inherit'
 })
