@@ -18,7 +18,6 @@ exec('which qemu-arm-static', function (err, stdout) {
 
   exec('which systemd-nspawn', function (err, stdout) {
     if (err || !stdout) throw new Error('systemd-nspawn is required')
-
     clear()
     get(raspbian, function (err, res) {
       if (err || res.statusCode !== 200) throw new Error('Could not download raspbian')
@@ -42,6 +41,9 @@ exec('which qemu-arm-static', function (err, stdout) {
 })
 
 function clear () {
+  if (fs.existsSync(dir) === false) {
+    return
+  }
   fs.readdirSync(dir).forEach(function (name) {
     try {
       fs.unlinkSync(path.join(dir, name))
