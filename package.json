@@ -1,6 +1,6 @@
 {
   "name": "raspberry-pi-container",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "systemd-nspawn raspberry-pi container backed by qemu-arm-static",
   "main": "index.js",
   "bin": {
