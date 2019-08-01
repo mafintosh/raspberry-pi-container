@@ -9,7 +9,7 @@ const pump = require('pump')
 const prettier = require('prettier-bytes')
 const diff = require('ansi-diff')()
 
-const raspbian = 'https://downloads.raspberrypi.org/raspbian_lite_latest'
+const raspbian = process.env.RASPBIAN || 'https://downloads.raspberrypi.org/raspbian_lite_latest'
 const dir = path.join(__dirname, 'raspbian')
 
 exec('which qemu-arm-static', function (err, stdout) {
